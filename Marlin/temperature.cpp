@@ -511,6 +511,7 @@ void Temperature::_temp_error(const int8_t e, const char * const serial_msg, con
   if (IsRunning()) {
     SERIAL_ERROR_START();
     serialprintPGM(serial_msg);
+    print_heaterstates();
     SERIAL_ERRORPGM(MSG_STOPPED_HEATER);
     if (e >= 0) SERIAL_ERRORLN((int)e); else SERIAL_ERRORLNPGM(MSG_HEATER_BED);
   }

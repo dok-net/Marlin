@@ -2532,7 +2532,9 @@ void kill_screen(const char* lcd_msg) {
       MENU_ITEM(gcode, MSG_AUTO_HOME_Y, PSTR("G28 Y"));
       MENU_ITEM(gcode, MSG_AUTO_HOME_Z, PSTR("G28 Z"));
     #endif
-
+    MENU_ITEM(gcode, MSG_LOAD_FILAMENT, PSTR("G21 G F200 E10"));
+    MENU_ITEM(gcode, MSG_FEED_FILAMENT, PSTR("G F300 E1000"));
+    MENU_ITEM(gcode, MSG_UNLOAD_FILAMENT, PSTR("G F300 E-1000"));
     //
     // Level Bed
     //
