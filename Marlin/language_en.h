@@ -1073,15 +1073,6 @@
   #ifndef MSG_FILAMENT_CHANGE_RESUME_1
     #define MSG_FILAMENT_CHANGE_RESUME_1        _UxGT("Resuming...")
   #endif
-  #ifndef MSG_LOAD_FILAMENT
-    #define MSG_LOAD_FILAMENT                   _UxGT("Load Filament")
-  #endif
-  #ifndef MSG_UNLOAD_FILAMENT
-    #define MSG_UNLOAD_FILAMENT                   _UxGT("Unload Filament")
-  #endif
-  #ifndef MSG_FEED_FILAMENT
-    #define MSG_FEED_FILAMENT                   _UxGT("Feed 20cm")
-  #endif
 #endif // LCD_HEIGHT < 4
 
 #endif // LANGUAGE_EN_H

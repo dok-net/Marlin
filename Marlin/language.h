@@ -258,9 +258,6 @@
 #define MSG_T_MAXTEMP                       "MAXTEMP triggered"
 #define MSG_T_MINTEMP                       "MINTEMP triggered"
 
-#define MSG_LOAD_FILAMENT                   "Load Filament"
-#define MSG_UNLOAD_FILAMENT                 "Unload Filament"
-#define MSG_FEED_FILAMENT                   "Feed 20cm"
 // Debug
 #define MSG_DEBUG_PREFIX                    "DEBUG:"
 #define MSG_DEBUG_OFF                       "off"
