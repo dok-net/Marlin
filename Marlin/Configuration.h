@@ -848,7 +848,7 @@
  *   leveling in steps so you can manually adjust the Z height at each grid-point.
  *   With an LCD controller the process is guided step-by-step.
  */
-//#define AUTO_BED_LEVELING_3POINT
+#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
 //#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
@@ -910,10 +910,10 @@
   // A simple cross-product is used to estimate the plane of the bed.
   #define ABL_PROBE_PT_1_X 15
   #define ABL_PROBE_PT_1_Y 10
-  #define ABL_PROBE_PT_2_X 85
+  #define ABL_PROBE_PT_2_X 90
   #define ABL_PROBE_PT_2_Y 10
-  #define ABL_PROBE_PT_3_X 50
-  #define ABL_PROBE_PT_3_Y 90
+  #define ABL_PROBE_PT_3_X 55
+  #define ABL_PROBE_PT_3_Y 100
 
 #elif ENABLED(AUTO_BED_LEVELING_UBL)
 
@@ -925,12 +925,12 @@
   #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
-  #define UBL_PROBE_PT_1_X 39       // Probing points for 3-Point leveling of the mesh
-  #define UBL_PROBE_PT_1_Y 180
-  #define UBL_PROBE_PT_2_X 39
-  #define UBL_PROBE_PT_2_Y 20
-  #define UBL_PROBE_PT_3_X 180
-  #define UBL_PROBE_PT_3_Y 20
+  #define UBL_PROBE_PT_1_X 15       // Probing points for 3-Point leveling of the mesh
+  #define UBL_PROBE_PT_1_Y 10
+  #define UBL_PROBE_PT_2_X 90
+  #define UBL_PROBE_PT_2_Y 10
+  #define UBL_PROBE_PT_3_X 55
+  #define UBL_PROBE_PT_3_Y 100
 
   //#define UBL_G26_MESH_VALIDATION // Enable G26 mesh validation
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
@@ -953,7 +953,7 @@
  * Use the LCD controller for bed leveling
  * Requires MESH_BED_LEVELING or PROBE_MANUALLY
  */
-//#define LCD_BED_LEVELING
+#define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
   #define MBL_Z_STEP 0.025    // Step size while manually probing Z axis.
@@ -961,7 +961,7 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-#define LEVEL_BED_CORNERS
+//#define LEVEL_BED_CORNERS
 
 /**
  * Commands to execute at the end of G29 probing.
@@ -1164,7 +1164,7 @@
  *
  * View the current statistics with M78.
  */
-#define PRINTCOUNTER
+//#define PRINTCOUNTER
 
 //=============================================================================
 //============================= LCD and SD support ============================
