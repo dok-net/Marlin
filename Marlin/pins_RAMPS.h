@@ -257,7 +257,9 @@
 
 #ifndef FAN_PIN
   #if ENABLED(IS_RAMPS_EFB) || ENABLED(IS_RAMPS_EFF)  // Hotend, Fan, Bed or Hotend, Fan, Fan
-    #define FAN_PIN        -1
+    #ifndef FAN_PIN
+      #define FAN_PIN      RAMPS_D9_PIN
+    #endif
   #elif ENABLED(IS_RAMPS_EEF) || ENABLED(IS_RAMPS_SF) // Hotend, Hotend, Fan or Spindle, Fan
     #define FAN_PIN        RAMPS_D8_PIN
   #elif ENABLED(IS_RAMPS_EEB)                         // Hotend, Hotend, Bed
@@ -509,7 +511,9 @@
       #define BTN_ENC           35
 
       #define SD_DETECT_PIN     49
-      #define KILL_PIN          64
+      #ifndef KILL_PIN
+        #define KILL_PIN        41
+      #endif
 
     #elif ENABLED(MINIPANEL)
 

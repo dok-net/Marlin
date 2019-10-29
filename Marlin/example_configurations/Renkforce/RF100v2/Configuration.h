@@ -134,6 +134,9 @@
   #define MOTHERBOARD BOARD_RAMPS_13_EFB
 #endif
 
+#define FAN_PIN  -1
+#define KILL_PIN 64
+
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
 #define CUSTOM_MACHINE_NAME "RF100"
