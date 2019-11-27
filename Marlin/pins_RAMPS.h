@@ -257,9 +257,7 @@
 
 #ifndef FAN_PIN
   #if ENABLED(IS_RAMPS_EFB) || ENABLED(IS_RAMPS_EFF)  // Hotend, Fan, Bed or Hotend, Fan, Fan
-    #ifndef FAN_PIN
-      #define FAN_PIN      RAMPS_D9_PIN
-    #endif
+    #define FAN_PIN      RAMPS_D9_PIN
   #elif ENABLED(IS_RAMPS_EEF) || ENABLED(IS_RAMPS_SF) // Hotend, Hotend, Fan or Spindle, Fan
     #define FAN_PIN        RAMPS_D8_PIN
   #elif ENABLED(IS_RAMPS_EEB)                         // Hotend, Hotend, Bed
